@@ -12,7 +12,7 @@ python -m pip git+https://github.com/DiTo97/Rf-PIQA.git
 
 The toolkit supports two types of panorama image quality assessment (IQA):
 - **reference (teacher) mode:** The model sees both a high-resolution panorama and its constituent low‐resolution images.
-- **reference-less (student) mode:** The model only sees the high-resolution panorama.
+- **reference-free (student) mode:** The model only sees the high-resolution panorama.
 
 A fully trained reference PIQA model shall be distilled into a reference‐less model via teacher-student training.
 
