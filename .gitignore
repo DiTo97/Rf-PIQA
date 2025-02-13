@@ -1,0 +1,22 @@
+# caching
+__pycache__
+.mypy_cache
+.pytest_cache
+.ruff_cache
+
+# contributing
+.nox
+
+# distribution
+build/
+dist/
+
+# environment variables
+.env
+
+# IDE
+.idea
+.vscode
+
+# virtual environment
+.venv

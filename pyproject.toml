@@ -1,0 +1,101 @@
+[build-system]
+requires = ["hatchling>1"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "Rf-PIQA"
+version = "0.1.0"
+description = "A machine learning toolkit for reference-free panorama image quality assessment (Rf-PIQA) modelling."
+readme = "README.md"
+requires-python = ">3.9"
+authors = [{name = "Federico Minutoli", email = "fede97.minutoli@gmail.com"}]
+license = {file = "LICENSE"}
+keywords = ["machine-learning", "toolkit", "panorama", "distillation", "image-quality-assessment"]
+dependencies = [
+    "accelerate>1",
+    "pytorch-lightning>2",
+    "PyYAML>6",
+    "torch>2",
+    "torchvision>0.20",
+    "transformers>4"
+]
+
+
+[dependency-groups]
+development = [
+    "mypy>1",
+    "pre-commit>4",
+    "pytest>8",
+    "pytest-asyncio>0.25.2"
+]
+
+
+[tool.uv]
+default-groups = ["development"]
+
+
+[tool.ruff]
+src = ["scripts", "src", "tests"]
+exclude = [
+  ".git",
+  ".git-rewrite",
+  ".ipynb_checkpoints",
+  ".mypy_cache",
+  ".nox",
+  ".pytest_cache",
+  ".pytype",
+  ".ruff_cache",
+  ".tox",
+  ".venv",
+  ".vscode",
+  "build",
+  "dist",
+  "site-packages",
+  "venv",
+]
+indent-width = 4
+line-length = 88
+
+[tool.ruff.format]
+indent-style = "space"
+line-ending = "auto"
+quote-style = "double"
+
+[tool.ruff.lint]
+select = [
+  "ARG",
+  "B",
+  "C4",
+  "EM",
+  "EXE",
+  "G",
+  "I",
+  "ICN",
+  "NPY",
+  "PD",
+  "PGH",
+  "PIE",
+  "PL",
+  "PT",
+  "PTH",
+  "RET",
+  "RUF",
+  "SIM",
+  "T20",
+  "UP",
+  "YTT",
+]
+ignore = [
+  "B008",
+  "PLR09",
+  "PLR2004",
+  "RET504"
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["Rf_PIQA"]
+lines-after-imports = 2
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["T20"]
