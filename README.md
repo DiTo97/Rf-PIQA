@@ -5,7 +5,7 @@
 
 A machine learning toolkit for reference-free panorama image quality assessment (Rf-PIQA) modelling.
 
-<img src="static/Rf-PIQA.png" width="720" height="405">
+<img src="static/Rf-PIQA.png" width="720" height="283">
 </div>
 
 ## 🚀 installation
