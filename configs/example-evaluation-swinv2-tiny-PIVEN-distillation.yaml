@@ -1,0 +1,29 @@
+student:
+  model_name: microsoft/swinv2-tiny-patch4-window16-256
+  image_size:
+    height: 256
+    width: 1024
+  hidden_size: 768
+  head_type: PIVEN
+  PIVEN:
+    lambda: 15.0
+    soft: 160.0
+    alpha: 0.05
+    beta: 0.5
+    eps: 1e-6
+  device: cuda
+  checkpoint: null
+dataset:
+  name_or_path: example
+  args:
+    constituents: false
+    num_samples: 50
+logging: null
+training:
+  batch_size: 16
+  num_epochs: 10
+  learning_rate: 0.0001
+  accumulate_grad_batches: 1
+  distillation:
+    temperature: 2.0
+    alpha: 0.5
