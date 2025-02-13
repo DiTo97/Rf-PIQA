@@ -3,9 +3,9 @@
 
 # Rf-PIQA
 
-<img src="static/Rf-PIQA.png" width="720" height="405">
+A machine learning toolkit for reference-free panorama image quality assessment (Rf-PIQA) modelling.
 
-A machine learning toolkit for **R**eference-**f**ree **P**anorama **I**mage **Q**uality **A**ssessment (Rf-PIQA) modelling.
+<img src="static/Rf-PIQA.png" width="720" height="405">
 </div>
 
 ## 🚀 installation
@@ -17,7 +17,7 @@ python -m pip git+https://github.com/DiTo97/Rf-PIQA.git
 ## 🌟 overview
 
 The toolkit supports two types of panorama image quality assessment (IQA):
-- **reference mode:** The model sees both a high-resolution panorama and its constituent low‐resolution images.
+- **reference mode:** The model sees both a high-resolution panorama and its low‐resolution constituents.
 - **reference-free mode:** The model only sees a high-resolution panorama.
 
 A fully trained reference PIQA model shall be distilled into a reference‐less model via **teacher-student** training.
